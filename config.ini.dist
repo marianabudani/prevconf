@@ -1,0 +1,18 @@
+[base_de_datos]
+db.adapter = PDO_MYSQL
+[SERVER DESARROLLO]
+db.config.server = 'SITE_SERVER'
+db.config.absolute = 'SITE_URI_ABS'
+db.config.host = 'SQL_HOST'
+db.config.username = 'SQL_USER'
+db.config.password = 'SQL_PASS'
+db.config.dbname = 'SQL_DB'
+db.config.route = 'SITE_URL'
+db.config.mail = 'mininterior.gob.ar'
+[SERVER PRODUCTION]
+db.config.adapter = PDO_MYSQL
+db.configRemote.host = 'SQL_HOST'
+db.configRemote.username = 'SQL_USER'
+db.configRemote.password =  'SQL_PASS'
+db.configRemote.dbname = 'SQL_DB'
+db.configRemote.route = 'SITE_URL'

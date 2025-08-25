@@ -1,0 +1,3 @@
+#Paso 1: Editar el archivo config.ini con los datos de conexión correspondientes.
+#Paso 2: Editar el archivo views/assets/scripts/setting.js. Líneas 224|228 ¡CORREGIR!
+#Paso 3: Editar el archivo models/route.php getRouterImage(). ¡Solucionar el routeador para las imágenes!

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="../use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
+
+  <!-- Mirrored from desa-previaconformidad.mininterior.gob.ar/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Jul 2025 09:58:36 GMT -->
+  <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Previa Conformidad</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="Proyecto fronteras" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" />
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <style type="text/css">
+      .carga-archivo-input-f {
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        margin: 0px;
+        color: #333;
+      }
+      .carga-archivo-input-f input[type="file"] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+      }
+      .carga-archivo-input-title {
+        margin-left: 2px;
+      }
+    </style>
+
+    <link href="views/assets/css/main.css" rel="stylesheet" />
+    <link href="views/assets/css/zoomist.min.css" rel="stylesheet" />
+    <!-- DataTables -->
+    <link href="views/datatables/datatables.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- *************** ACTUAL: SE AGREGA UNA CLASE ********************-->
+    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header bg-white">
+      <!--*************************** ACTUAL: HEADER CAMBIA ********************************************-->
+      <header class="bk-min">
+        <nav class="navbar navbar-top navbar-default bk-min p-md-0 border-bottom-amarillo" role="navigation">
+          <div class="container">
+            <div class="navbar justify-content-between align-content-center p-lg-0 w-100">
+              <a class="navbar-brand m-lg-0" href="https://www.argentina.gob.ar/" aria-label="Argentina.gob.ar Presidencia de la Nación" target="_blank"> <img alt="Argentina.gob.ar" src="views/assets/images/argentinagob-2.svg" height="50" /> </a>
+              <div class="d-none">
+                <div class="input-group m-lg-0 p-lg-0">
+                  <input id="buscar" type="text" class="form-control input-search" aria-label="Buscar trámites, servicios o áreas" placeholder="Buscar trámites, servicios o áreas ..." />
+                  <span class="input-group-btn">
+                    <button class="btn bg-white" type="button" aria-label="Buscar" id="ejecutar"><i class="fa fa-search text-primary"></i></button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <div class="pb-5" id="log">
+        <!--*************************** ACTUAL: TITLE TOP SUBE ACA ********************************************-->
+        <div class="col-md-12 py-2 bk-min text-center">
+          <p class="title-top">Vicejefatura de Gabinete del Interior</p>
+        </div>
+        <!-- *************** ACTUAL: CAMBIA EL MT ********************-->
+        <div class="container mt-3">
+          <div class="row">
+            <div class="col-md-12 mt-md-5">
+              <h1>Solicitud Previa Conformidad</h1>
+              <p>
+                La <strong>Solicitud de Previa Conformidad</strong> es un trámite administrativo que deberán realizar quienes, en el marco de la Resolución <a href="https://www.argentina.gob.ar/normativa/nacional/resolución-166-2009-151041" target="_blank"><span>Ministerial Nº 166/09</span></a
+                >, tengan que:
+              </p>
+              <ul>
+                <li>Cambiar la <strong>titularidad de dominio</strong> de los inmuebles rurales y urbanos ubicados en Zonas de Seguridad de Fronteras.</li>
+                <li>Registrar <strong>operaciones inmobiliarias</strong> relacionadas con la transmisión de dominio, arrendamiento o locaciones o cualquier otra forma de derechos reales o personales sobre bienes, en virtud de las cuales deba entregarse la posesión o tenencia de inmuebles en Zonas de Seguridad.</li>
+                <li>Realizar <strong>transferencias de derechos de acciones o modificaciones de la estructura societaria</strong> de aquellas sociedades que sean titulares de dominio o posean derechos reales o personales sobre bienes ubicados en dichas zonas.</li>
+              </ul>
+              <p>El Acto Administrativo se materializa a través de Resolución de la Secretaría de Interior.</p>
+            </div>
+            <div class="col-md-12 mt-4">
+              <input type="hidden" id="base_url" value="https://desa-previaconformidad.mininterior.gob.ar/" />
+              <input type="hidden" id="server_name" value="desa-previaconformidad.mininterior.gob.ar" />
+              <!-- VISTA LOGIN -->
+              <div class="modulo-login">
+                <h4 class="mb-0">
+                  <span>Ingresá a tu cuenta.</span>
+                </h4>
+
+                <h6 class="mt-3">¿Sos escribano? <a href="javascript:getSignUp();" class="text-primary">Registrate</a></h6>
+                <h6 class="mt-0">¿Olvidaste tu contraseña? <a href="javascript:getRecovery();" class="text-primary">Recuperar clave</a></h6>
+
+                <div class="divider row"></div>
+
+                <div>
+                  <form class="">
+                    <div class="form-row">
+                      <div class="col-md-6">
+                        <div class="position-relative form-group">
+                          <label for="emailin" class="">Correo electrónico</label>
+                          <input name="email" id="emailin" placeholder="Correo electrónico aquí..." type="email" class="form-control" />
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="position-relative form-group">
+                          <label for="emailin" class="">Contraseña</label>
+                          <div class="input-group">
+                            <input class="form-control" type="password" placeholder="Contraseña aquí..." id="passin" name="login-password" aria-label="Password" aria-describedby="Password" autocomplete="off" onkeypress="if (event.which == 13) signInWhitEmailAndPassword();" required="" />
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary shadow-none" type="button" id="button-view"><i id="viewerPass" class="fas fa-eye" aria-hidden="true"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="position-relative form-check">
+                      <input name="check" id="okCheck" type="checkbox" class="form-check-input" />
+                      <label for="exampleCheck" class="form-check-label">¿Mantener logueado?</label>
+                    </div>
+                    <div class="divider row"></div>
+                    <div class="d-flex align-items-center">
+                      <div class="ml-auto">
+                        <!-- <a href="javascript:getRecovery();" class="btn-lg btn btn-link">Recordar Contraseña</a> -->
+                        <a href="#" onclick="generateLogin()" class="btn btn-primary btn-lg loginIn">Ingresar</a>
+                        <div id="vistaModalCC"></div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <!-- ALTA DE USUARIO -->
+              <div class="modulo-signup" style="display: none">
+                <!-- <div class="app-logo"> -->
+                <!-- <img src="https://sistemas.mininterior.gob.ar/add/genesis/views/assets/images/logo-inverse.png" alt="" /> -->
+                <img src="_df48.html?echo%20$base_url;%20?>/views/assets/images/logo-inverse.png" alt="" />
+                <!-- </div> -->
+                <h4 class="mb-0">
+                  <span class="d-block">Hola, vamos a pedirte unos pequeños datos</span>
+                  <span>Por favor, ingresá y definí tus credenciales de acceso.</span>
+                </h4>
+                <h6 class="mt-3">¿Ya tenés una cuenta? <a href="javascript:getLogin();" class="text-primary">Ingresar</a></h6>
+                <div class="divider row"></div>
+
+                <div>
+                  <form class="">
+                    <div class="form-row">
+                      <div class="col-md-6">
+                        <div class="position-relative form-group">
+                          <label for="nombreup" class="">Apellido y nombre/s</label>
+                          <input name="text" id="nombreup" placeholder="Nombre completo aquí..." type="text" class="form-control" />
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="position-relative form-group">
+                          <label for="direccionup" class="">Dirección Postal</label>
+                          <input name="text" id="direccionup" placeholder="Dirección aquí..." type="text" class="form-control" />
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="position-relative form-group">
+                          <label for="postalup" class="">Código postal</label>
+                          <input name="text" id="postalup" placeholder="Código postal aquí..." type="text" class="form-control" />
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="position-relative form-group">
+                          <label for="provinciaup">Provincia</label>
+                          <select name="provinciaup" id="provinciaup" class="form-control">
+                            <option disabled="true" selected="true" value="0">Seleccionar una Provincia</option>
+                            <option value="1">BUENOS AIRES</option>
+                            <option value="2">CIUDAD AUTONOMA DE Bs As</option>
+                            <option value="3">CATAMARCA</option>
+                            <option value="4">CHACO</option>
+                            <option value="5">CHUBUT</option>
+                            <option value="6">CORDOBA</option>
+                            <option value="7">CORRIENTES</option>
+                            <option value="8">ENTRE RIOS</option>
+                            <option value="9">FORMOSA</option>
+                            <option value="10">JUJUY</option>
+                            <option value="11">LA PAMPA</option>
+                            <option value="12">LA RIOJA</option>
+                            <option value="13">MENDOZA</option>
+                            <option value="14">MISIONES</option>
+                            <option value="15">NEUQUEN</option>
+                            <option value="16">RIO NEGRO</option>
+                            <option value="17">SALTA</option>
+                            <option value="18">SAN JUAN</option>
+                            <option value="19">SAN LUIS</option>
+                            <option value="20">SANTA CRUZ</option>
+                            <option value="21">SANTA FE</option>
+                            <option value="22">SANTIAGO DEL ESTERO</option>
+                            <option value="23">TIERRA DEL FUEGO</option>
+                            <option value="24">TUCUMAN</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="position-relative form-group">
+                          <label for="emailup" class="">Correo electrónico</label>
+                          <input name="emailup" id="emailup" placeholder="Correo electrónico aquí..." type="email" class="form-control" />
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="position-relative form-group">
+                          <label for="passup" class="">Contraseña</label>
+                          <div class="input-group">
+                            <input class="form-control" type="password" placeholder="Contraseña aquí..." id="passup" name="passup" aria-label="Password" aria-describedby="Password" autocomplete="off" required="" />
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="button" id="button-view-alta"><i id="viewerPassAlta" class="fas fa-eye" aria-hidden="true"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <div class="input-group">
+                            <input id="nombreArchivoup" placeholder="Adjuntar FORMULARIO N°8 – 2020 ..." type="text" class="form-control" disabled="disabled" />
+                            <div class="btn btn-default carga-archivo-input-f" style="background-color: #f8f9fa; border-color: #ccc; font-size: 0.9rem; border-radius: 0rem">
+                              <i class="fas fa-folder-open"></i>
+                              <span class="carga-archivo-input-title">Seleccionar archivo</span>
+                              <input type="file" class="input-file-preview-nup" id="input-file-preview-nup" accept=".pdf, .jpg, .jpeg, .png" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="divider row"></div>
+                    <div class="d-flex align-items-center">
+                      <div class="ml-auto">
+                        <a href="#" onclick="generateUser();" class="btn btn-primary btn-lg loginIn">Aceptar</a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <!-- RECUPERO DE CONTRASEÑA -->
+              <div class="modulo-recovery" style="display: none">
+                <!-- <div class="app-logo"> -->
+                <!-- <img src="https://sistemas.mininterior.gob.ar/add/genesis/views/assets/images/logo-inverse.png" alt="" /> -->
+                <img src="/views/assets/images/logo-inverse.html" alt="" />
+                <!-- </div> -->
+                <h4 class="mb-0">
+                  <span class="d-block">Hola, para recuperar la contraseña vamos a necesitar que ingreses tu correo electrónico </span>
+                  <span>Por favor, debe ser el mismo con el que te registraste en el sistema</span>
+                </h4>
+                <h6 class="mt-3">¿Ya tenés una cuenta? <a href="javascript:getLogin();" class="text-primary">Ingresar</a></h6>
+                <div class="divider row"></div>
+
+                <div>
+                  <form class="">
+                    <div class="form-row">
+                      <div class="col-md-12">
+                        <div class="position-relative form-group">
+                          <label for="emailrecovery" class="">Correo electrónico</label>
+                          <input name="emailrecovery" id="emailrecovery" placeholder="Correo electrónico aquí..." type="email" class="form-control" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="divider row"></div>
+                    <div class="d-flex align-items-center">
+                      <div class="ml-auto">
+                        <a href="#" onclick="recoveryPass()" class="btn btn-primary btn-lg loginIn">Recuperar contraseña</a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--*************************** ACTUAL: FOOTER CAMBIA ********************************************-->
+    <footer class="main-footer mt-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <div class="region region-footer1">
+              <section id="block-menu-menu-footer-1" class="block block-menu clearfix">
+                <h2 class="block-title h3 section-title h3 section-title">Trámites</h2>
+                <ul class="menu nav">
+                  <li class="first leaf"><a href="https://www.argentina.gob.ar/turnos" target="_blank">Turnos</a></li>
+                  <li class="leaf"><a href="https://www.argentina.gob.ar/jefatura/innovacion-tecnologica/innovacion-administrativa/tramites-distancia-tad" target="_blank">Trámites a distancia</a></li>
+                  <li class="last leaf"><a href="https://www.argentina.gob.ar/miargentina/mesadeayuda" target="_blank">Atención al ciudadano</a></li>
+                </ul>
+              </section>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="region region-footer2">
+              <section id="block-menu-menu-footer-2" class="block block-menu clearfix">
+                <h2 class="block-title h3 section-title h3 section-title">Acerca de la República Argentina</h2>
+                <ul class="menu nav">
+                  <li class="first leaf"><a href="https://www.argentina.gob.ar/pais" target="_blank">Nuestro país</a></li>
+                  <li class="first leaf"><a href="https://www.argentina.gob.ar/normativa" target="_blank">Leyes argentinas</a></li>
+                  <li class="leaf"><a href="https://www.argentina.gob.ar/organismos" target="_blank">Organismos</a></li>
+                  <li class="last leaf"><a href="https://www.argentina.gob.ar/jefatura/mapa-del-estado" target="_blank">Mapa del Estado</a></li>
+                </ul>
+              </section>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="region region-footer3">
+              <section id="block-menu-menu-footer-3" class="block block-menu clearfix">
+                <h2 class="block-title h3 section-title h3 section-title">Acerca de Argentina.gob.ar</h2>
+                <ul class="menu nav">
+                  <li class="first leaf"><a href="https://www.argentina.gob.ar/acerca" target="_blank">Acerca de este sitio</a></li>
+                  <li class="leaf"><a href="https://www.argentina.gob.ar/terminos-y-condiciones" target="_blank">Términos y condiciones</a></li>
+                  <li class="last leaf"><a href="https://www.argentina.gob.ar/sugerencias" target="_blank">Sugerencias</a></li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid border-top-amarillo">
+        <div class="row sub-footer">
+          <div class="container">
+            <div class="col-sm-6 m-y-1 p-x-0">
+              <!-- <p class="text-muted small m-b-2">
+              <a href="https://creativecommons.org/licenses/by/4.0/deed.es" target="_blank" rel="noreferrer">Los contenidos de Argentina.gob.ar están licenciados bajo Creative Commons Atribución 4.0 Internacional</a>            </p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="views/assets/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="views/assets/scripts/main.js"></script>
+    <script type="text/javascript" src="views/assets/scripts/sessions.js"></script>
+    <script type="text/javascript" src="views/assets/scripts/sweetalert.min.js"></script>
+    <script type="text/javascript" src="views/assets/scripts/setting.js"></script>
+    <!-- <script type="text/javascript" src=""></script>  -->
+
+    <!-- DataTables -->
+    <script src="../code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="../cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="../cdn.datatables.net/buttons/1.6.0/js/dataTables.buttons.min.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="../cdn.datatables.net/buttons/1.6.0/js/buttons.html5.min.js"></script>
+
+    <link href="../cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="../cdn.datatables.net/buttons/1.6.0/css/buttons.dataTables.min.css" rel="stylesheet" />
+
+    <!-- fronteras -->
+    <script type="text/javascript" src="views/assets/scripts/usuarios.js"></script>
+    <script type="text/javascript" src="views/assets/scripts/fronteras.js"></script>
+
+    <script type="text/javascript" src="views/assets/scripts/zoomist.min.js"></script>
+    <script type="text/javascript" src="views/assets/scripts/argentina.js"></script>
+  </body>
+
+  <!-- Mirrored from desa-previaconformidad.mininterior.gob.ar/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Jul 2025 09:58:43 GMT -->
+</html>
